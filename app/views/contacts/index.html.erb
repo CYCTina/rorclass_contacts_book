@@ -1,0 +1,12 @@
+<h1>All Contacts</h1>
+<ul>
+<% @contacts.each do |contact| %>
+	<strong><%= contact.name %></strong>
+	<li><%= contact.company %></li>
+	<li><%= contact.phone %></li>
+	<li><%= contact.email %></li>
+</br>
+<% end %>
+</ul>
+
+<%= button_to "Add New Contact", new_contact_path, :method => :get %>
