@@ -7,8 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+	<nav>
+		<%= link_to "Home", root_path %>
+		<%= link_to "View", view_path %>
+		<%= link_to "Create", new_contact_path %>
+</nav>
 <%= yield %>
 
+<footer><%= Time.now.strftime("%A %m/%d/%Y %H:%M:%S %p") %></footer>
 </body>
 </html>
